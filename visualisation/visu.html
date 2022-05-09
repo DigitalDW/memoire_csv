@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>DOOM levels visualisation</title>
+  </head>
+  <body>
+    <!-- jQuery & Bootstrap -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+
+    <!-- Sweetalert 2 -->
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@9"></script>
+
+    <!-- D3 -->
+    <script src="https://d3js.org/d3.v7.min.js"></script>
+
+    <select name="levels" id="level_select">
+      <option value="E1M1">E1M1</option>
+      <option value="E1M2">E1M2</option>
+      <option value="E1M3">E1M3</option>
+      <option value="E1M4">E1M4</option>
+      <option value="E1M5">E1M5</option>
+      <option value="E1M6">E1M6</option>
+      <option value="E1M7">E1M7</option>
+      <option value="E1M8">E1M8</option>
+      <option value="E1M9">E1M9</option>
+      <option value="E2M1">E2M1</option>
+      <option value="E2M2">E2M2</option>
+      <option value="E2M3">E2M3</option>
+      <option value="E2M4">E2M4</option>
+      <option value="E2M5">E2M5</option>
+      <option value="E2M6">E2M6</option>
+      <option value="E2M7">E2M7</option>
+      <option value="E2M8">E2M8</option>
+      <option value="E2M9">E2M9</option>
+      <option value="E3M1">E3M1</option>
+      <option value="E3M2">E3M2</option>
+      <option value="E3M3">E3M3</option>
+      <option value="E3M4">E3M4</option>
+      <option value="E3M5">E3M5</option>
+      <option value="E3M6">E3M6</option>
+      <option value="E3M7">E3M7</option>
+      <option value="E3M8">E3M8</option>
+      <option value="E3M9">E3M9</option>
+    </select>
+    <input type="checkbox" name="order" id="order" />
+    <label for="order">Descending order</label>
+    <input type="checkbox" name="vert_points" id="vert_points" />
+    <label for="order">Display vertices numbers</label>
+    <input type="checkbox" name="front" id="front" />
+    <label for="order">Display front-facing sectors</label>
+    <input type="checkbox" name="back" id="back" />
+    <label for="order">Display back-facing sectors</label>
+    <input type="checkbox" name="line_dir" id="line_dir" />
+    <label for="order">Display lines direction</label>
+    <div id="level"></div>
+
+    <!-- Local scripts -->
+    <script type="text/javascript" src="visu.js"></script>
+  </body>
+</html>

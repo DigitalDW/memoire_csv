@@ -1,0 +1,812 @@
+{
+    "level_1": {
+        "v1": {
+            "number": "7",
+            "x_position": 832,
+            "y_position": -3552,
+            "dist": 232.96351645697658
+        },
+        "v2": {
+            "number": "6",
+            "x_position": 1280,
+            "y_position": -3552,
+            "dist": 232.96351645697658
+        },
+        "v3": {
+            "number": "2",
+            "x_position": 1024,
+            "y_position": -3648,
+            "dist": 45.254833995939045
+        },
+        "v4": {
+            "number": "3",
+            "x_position": 1088,
+            "y_position": -3648,
+            "dist": 45.254833995939045
+        },
+        "player_start": {
+            "x_position": 1056,
+            "y_position": -3616
+        }
+    },
+    "level_2": {
+        "v1": {
+            "number": "94",
+            "x_position": -192,
+            "y_position": -192,
+            "dist": 167.0449041425688
+        },
+        "v2": {
+            "number": "0",
+            "x_position": 128,
+            "y_position": -96,
+            "dist": 215.25798475317936
+        },
+        "v3": {
+            "number": "5",
+            "x_position": -128,
+            "y_position": -320,
+            "dist": 124.96399481450646
+        },
+        "v4": {
+            "number": "320",
+            "x_position": 32,
+            "y_position": -320,
+            "dist": 102.44998779892558
+        },
+        "player_start": {
+            "x_position": -32,
+            "y_position": -240
+        }
+    },
+    "level_3": {
+        "v1": {
+            "number": "821",
+            "x_position": -1568,
+            "y_position": -3264,
+            "dist": 124.96399481450646
+        },
+        "v2": {
+            "number": "822",
+            "x_position": -1440,
+            "y_position": -3264,
+            "dist": 86.16263691415206
+        },
+        "v3": {
+            "number": "2",
+            "x_position": -1536,
+            "y_position": -3392,
+            "dist": 80.0
+        },
+        "v4": {
+            "number": "0",
+            "x_position": -1344,
+            "y_position": -3392,
+            "dist": 136.7040599250805
+        },
+        "player_start": {
+            "x_position": -1472,
+            "y_position": -3344
+        }
+    },
+    "level_4": {
+        "v1": {
+            "number": "10",
+            "x_position": 1856,
+            "y_position": 1216,
+            "dist": 200.47942537826668
+        },
+        "v2": {
+            "number": "620",
+            "x_position": 2112,
+            "y_position": 1184,
+            "dist": 102.44998779892558
+        },
+        "v3": {
+            "number": "451",
+            "x_position": 1984,
+            "y_position": 1088,
+            "dist": 57.688820407423826
+        },
+        "v4": {
+            "number": "543",
+            "x_position": 2112,
+            "y_position": 1088,
+            "dist": 86.16263691415206
+        },
+        "player_start": {
+            "x_position": 2032,
+            "y_position": 1120
+        }
+    },
+    "level_5": {
+        "v1": {
+            "number": "575",
+            "x_position": -472,
+            "y_position": -480,
+            "dist": 286.77517326295873
+        },
+        "v2": {
+            "number": "570",
+            "x_position": 32,
+            "y_position": -480,
+            "dist": 293.7209560109731
+        },
+        "v3": {
+            "number": "549",
+            "x_position": -256,
+            "y_position": -704,
+            "dist": 86.16263691415206
+        },
+        "v4": {
+            "number": "546",
+            "x_position": -192,
+            "y_position": -704,
+            "dist": 86.16263691415206
+        },
+        "player_start": {
+            "x_position": -224,
+            "y_position": -624
+        }
+    },
+    "level_6": {
+        "v1": {
+            "number": "17",
+            "x_position": 0,
+            "y_position": -1120,
+            "dist": 257.9922479455536
+        },
+        "v2": {
+            "number": "1137",
+            "x_position": 208,
+            "y_position": -1328,
+            "dist": 182.42806801586207
+        },
+        "v3": {
+            "number": "1122",
+            "x_position": 0,
+            "y_position": -1408,
+            "dist": 45.254833995939045
+        },
+        "v4": {
+            "number": "1138",
+            "x_position": 128,
+            "y_position": -1408,
+            "dist": 101.19288512538814
+        },
+        "player_start": {
+            "x_position": 32,
+            "y_position": -1376
+        }
+    },
+    "level_7": {
+        "v1": {
+            "number": "310",
+            "x_position": 16,
+            "y_position": 576,
+            "dist": 93.29523031752481
+        },
+        "v2": {
+            "number": "311",
+            "x_position": 160,
+            "y_position": 576,
+            "dist": 80.0
+        },
+        "v3": {
+            "number": "758",
+            "x_position": 8,
+            "y_position": 368,
+            "dist": 182.60339536821323
+        },
+        "v4": {
+            "number": "757",
+            "x_position": 128,
+            "y_position": 368,
+            "dist": 163.1686244349691
+        },
+        "player_start": {
+            "x_position": 96,
+            "y_position": 528
+        }
+    },
+    "level_8": {
+        "v1": {
+            "number": "55",
+            "x_position": -224,
+            "y_position": -128,
+            "dist": 135.7645019878171
+        },
+        "v2": {
+            "number": "120",
+            "x_position": -64,
+            "y_position": -192,
+            "dist": 71.55417527999327
+        },
+        "v3": {
+            "number": "54",
+            "x_position": -224,
+            "y_position": -320,
+            "dist": 135.7645019878171
+        },
+        "v4": {
+            "number": "121",
+            "x_position": -64,
+            "y_position": -256,
+            "dist": 71.55417527999327
+        },
+        "player_start": {
+            "x_position": -128,
+            "y_position": -224
+        }
+    },
+    "level_9": {
+        "v1": {
+            "number": "322",
+            "x_position": 0,
+            "y_position": -240,
+            "dist": 101.19288512538814
+        },
+        "v2": {
+            "number": "13",
+            "x_position": 320,
+            "y_position": -192,
+            "dist": 237.8570999570961
+        },
+        "v3": {
+            "number": "319",
+            "x_position": 0,
+            "y_position": -304,
+            "dist": 101.19288512538814
+        },
+        "v4": {
+            "number": "12",
+            "x_position": 448,
+            "y_position": -320,
+            "dist": 355.2576529787923
+        },
+        "player_start": {
+            "x_position": 96,
+            "y_position": -272
+        }
+    },
+    "level_10": {
+        "v1": {
+            "number": "5",
+            "x_position": -64,
+            "y_position": 128,
+            "dist": 102.44998779892558
+        },
+        "v2": {
+            "number": "6",
+            "x_position": 64,
+            "y_position": 128,
+            "dist": 102.44998779892558
+        },
+        "v3": {
+            "number": "3",
+            "x_position": -128,
+            "y_position": -64,
+            "dist": 170.0823330037544
+        },
+        "v4": {
+            "number": "0",
+            "x_position": 128,
+            "y_position": -64,
+            "dist": 170.0823330037544
+        },
+        "player_start": {
+            "x_position": 0,
+            "y_position": 48
+        }
+    },
+    "level_11": {
+        "v1": {
+            "number": "1134",
+            "x_position": 576,
+            "y_position": 4608,
+            "dist": 45.254833995939045
+        },
+        "v2": {
+            "number": "1135",
+            "x_position": 640,
+            "y_position": 4608,
+            "dist": 45.254833995939045
+        },
+        "v3": {
+            "number": "1133",
+            "x_position": 576,
+            "y_position": 4544,
+            "dist": 45.254833995939045
+        },
+        "v4": {
+            "number": "1136",
+            "x_position": 640,
+            "y_position": 4544,
+            "dist": 45.254833995939045
+        },
+        "player_start": {
+            "x_position": 608,
+            "y_position": 4576
+        }
+    },
+    "level_12": {
+        "v1": {
+            "number": "7",
+            "x_position": 448,
+            "y_position": 1984,
+            "dist": 86.16263691415206
+        },
+        "v2": {
+            "number": "2",
+            "x_position": 512,
+            "y_position": 1984,
+            "dist": 86.16263691415206
+        },
+        "v3": {
+            "number": "5",
+            "x_position": 384,
+            "y_position": 1808,
+            "dist": 135.7645019878171
+        },
+        "v4": {
+            "number": "4",
+            "x_position": 576,
+            "y_position": 1808,
+            "dist": 135.7645019878171
+        },
+        "player_start": {
+            "x_position": 480,
+            "y_position": 1904
+        }
+    },
+    "level_13": {
+        "v1": {
+            "number": "738",
+            "x_position": -832,
+            "y_position": -2560,
+            "dist": 71.55417527999327
+        },
+        "v2": {
+            "number": "864",
+            "x_position": -704,
+            "y_position": -2560,
+            "dist": 71.55417527999327
+        },
+        "v3": {
+            "number": "737",
+            "x_position": -896,
+            "y_position": -2624,
+            "dist": 131.93938001976514
+        },
+        "v4": {
+            "number": "851",
+            "x_position": -704,
+            "y_position": -2752,
+            "dist": 172.32527382830412
+        },
+        "player_start": {
+            "x_position": -768,
+            "y_position": -2592
+        }
+    },
+    "level_14": {
+        "v1": {
+            "number": "846",
+            "x_position": -1768,
+            "y_position": 2432,
+            "dist": 236.91348631937356
+        },
+        "v2": {
+            "number": "847",
+            "x_position": -1376,
+            "y_position": 2432,
+            "dist": 167.0449041425688
+        },
+        "v3": {
+            "number": "842",
+            "x_position": -1680,
+            "y_position": 2264,
+            "dist": 187.4459922217597
+        },
+        "v4": {
+            "number": "843",
+            "x_position": -1456,
+            "y_position": 2264,
+            "dist": 144.22205101855957
+        },
+        "player_start": {
+            "x_position": -1536,
+            "y_position": 2384
+        }
+    },
+    "level_15": {
+        "v1": {
+            "number": "1",
+            "x_position": 544,
+            "y_position": 448,
+            "dist": 67.88225099390856
+        },
+        "v2": {
+            "number": "16",
+            "x_position": 736,
+            "y_position": 448,
+            "dist": 151.7893276880822
+        },
+        "v3": {
+            "number": "0",
+            "x_position": 544,
+            "y_position": 320,
+            "dist": 93.29523031752481
+        },
+        "v4": {
+            "number": "21",
+            "x_position": 608,
+            "y_position": 320,
+            "dist": 81.58431221748455
+        },
+        "player_start": {
+            "x_position": 592,
+            "y_position": 400
+        }
+    },
+    "level_16": {
+        "v1": {
+            "number": "1134",
+            "x_position": 1416,
+            "y_position": 1920,
+            "dist": 144.22205101855957
+        },
+        "v2": {
+            "number": "1139",
+            "x_position": 1504,
+            "y_position": 1824,
+            "dist": 93.29523031752481
+        },
+        "v3": {
+            "number": "1613",
+            "x_position": 1312,
+            "y_position": 1664,
+            "dist": 158.39191898578665
+        },
+        "v4": {
+            "number": "1142",
+            "x_position": 1504,
+            "y_position": 1664,
+            "dist": 137.63720427268203
+        },
+        "player_start": {
+            "x_position": 1424,
+            "y_position": 1776
+        }
+    },
+    "level_17": {
+        "v1": {
+            "number": "29",
+            "x_position": -128,
+            "y_position": -688,
+            "dist": 57.688820407423826
+        },
+        "v2": {
+            "number": "28",
+            "x_position": -64,
+            "y_position": -688,
+            "dist": 57.688820407423826
+        },
+        "v3": {
+            "number": "19",
+            "x_position": -112,
+            "y_position": -784,
+            "dist": 50.59644256269407
+        },
+        "v4": {
+            "number": "18",
+            "x_position": -80,
+            "y_position": -784,
+            "dist": 50.59644256269407
+        },
+        "player_start": {
+            "x_position": -96,
+            "y_position": -736
+        }
+    },
+    "level_18": {
+        "v1": {
+            "number": "43",
+            "x_position": -128,
+            "y_position": -64,
+            "dist": 320.0
+        },
+        "v2": {
+            "number": "53",
+            "x_position": 256,
+            "y_position": -64,
+            "dist": 320.0
+        },
+        "v3": {
+            "number": "27",
+            "x_position": -320,
+            "y_position": -448,
+            "dist": 404.7715405015526
+        },
+        "v4": {
+            "number": "2",
+            "x_position": 384,
+            "y_position": -576,
+            "dist": 409.7999511957023
+        },
+        "player_start": {
+            "x_position": 64,
+            "y_position": -320
+        }
+    },
+    "level_19": {
+        "v1": {
+            "number": "164",
+            "x_position": 256,
+            "y_position": -1512,
+            "dist": 64.4980619863884
+        },
+        "v2": {
+            "number": "165",
+            "x_position": 320,
+            "y_position": -1512,
+            "dist": 64.4980619863884
+        },
+        "v3": {
+            "number": "168",
+            "x_position": 160,
+            "y_position": -1696,
+            "dist": 181.01933598375618
+        },
+        "v4": {
+            "number": "166",
+            "x_position": 384,
+            "y_position": -1600,
+            "dist": 101.19288512538814
+        },
+        "player_start": {
+            "x_position": 288,
+            "y_position": -1568
+        }
+    },
+    "level_20": {
+        "v1": {
+            "number": "0",
+            "x_position": 1984,
+            "y_position": -128,
+            "dist": 249.92798962901293
+        },
+        "v2": {
+            "number": "1",
+            "x_position": 2200,
+            "y_position": -256,
+            "dist": 40.0
+        },
+        "v3": {
+            "number": "52",
+            "x_position": 1984,
+            "y_position": -448,
+            "dist": 249.92798962901293
+        },
+        "v4": {
+            "number": "51",
+            "x_position": 2200,
+            "y_position": -320,
+            "dist": 40.0
+        },
+        "player_start": {
+            "x_position": 2176,
+            "y_position": -288
+        }
+    },
+    "level_21": {
+        "v1": {
+            "number": "2",
+            "x_position": -192,
+            "y_position": -1088,
+            "dist": 163.1686244349691
+        },
+        "v2": {
+            "number": "793",
+            "x_position": -104,
+            "y_position": -1080,
+            "dist": 177.08754896942924
+        },
+        "v3": {
+            "number": "23",
+            "x_position": -192,
+            "y_position": -1280,
+            "dist": 45.254833995939045
+        },
+        "v4": {
+            "number": "912",
+            "x_position": -152,
+            "y_position": -1280,
+            "dist": 32.984845004941285
+        },
+        "player_start": {
+            "x_position": -160,
+            "y_position": -1248
+        }
+    },
+    "level_22": {
+        "v1": {
+            "number": "16",
+            "x_position": 0,
+            "y_position": 1152,
+            "dist": 50.59644256269407
+        },
+        "v2": {
+            "number": "19",
+            "x_position": 64,
+            "y_position": 1152,
+            "dist": 67.88225099390856
+        },
+        "v3": {
+            "number": "11",
+            "x_position": -128,
+            "y_position": 1088,
+            "dist": 144.88616221019868
+        },
+        "v4": {
+            "number": "14",
+            "x_position": 192,
+            "y_position": 1088,
+            "dist": 176.72577627499618
+        },
+        "player_start": {
+            "x_position": 16,
+            "y_position": 1104
+        }
+    },
+    "level_23": {
+        "v1": {
+            "number": "5",
+            "x_position": -384,
+            "y_position": -1776,
+            "dist": 186.59046063504962
+        },
+        "v2": {
+            "number": "9",
+            "x_position": -64,
+            "y_position": -1776,
+            "dist": 186.59046063504962
+        },
+        "v3": {
+            "number": "2",
+            "x_position": -256,
+            "y_position": -1920,
+            "dist": 57.688820407423826
+        },
+        "v4": {
+            "number": "4",
+            "x_position": -192,
+            "y_position": -1920,
+            "dist": 57.688820407423826
+        },
+        "player_start": {
+            "x_position": -224,
+            "y_position": -1872
+        }
+    },
+    "level_24": {
+        "v1": {
+            "number": "47",
+            "x_position": 1408,
+            "y_position": -1408,
+            "dist": 489.76729168044693
+        },
+        "v2": {
+            "number": "614",
+            "x_position": 2081,
+            "y_position": -1280,
+            "dist": 631.1140942808994
+        },
+        "v3": {
+            "number": "45",
+            "x_position": 1408,
+            "y_position": -2816,
+            "dist": 1068.172270750369
+        },
+        "v4": {
+            "number": "11",
+            "x_position": 1800,
+            "y_position": -2000,
+            "dist": 225.84950741588966
+        },
+        "player_start": {
+            "x_position": 1712,
+            "y_position": -1792
+        }
+    },
+    "level_25": {
+        "v1": {
+            "number": "5",
+            "x_position": 320,
+            "y_position": -1088,
+            "dist": 307.7661449867415
+        },
+        "v2": {
+            "number": "819",
+            "x_position": 640,
+            "y_position": -1344,
+            "dist": 276.2028240261131
+        },
+        "v3": {
+            "number": "3",
+            "x_position": 352,
+            "y_position": -1472,
+            "dist": 81.58431221748455
+        },
+        "v4": {
+            "number": "0",
+            "x_position": 480,
+            "y_position": -1472,
+            "dist": 137.63720427268203
+        },
+        "player_start": {
+            "x_position": 368,
+            "y_position": -1392
+        }
+    },
+    "level_26": {
+        "v1": {
+            "number": "2",
+            "x_position": 96,
+            "y_position": -1360,
+            "dist": 150.94369811290565
+        },
+        "v2": {
+            "number": "5",
+            "x_position": 296,
+            "y_position": -1448,
+            "dist": 126.49110640673517
+        },
+        "v3": {
+            "number": "4",
+            "x_position": 160,
+            "y_position": -1560,
+            "dist": 73.7563556583431
+        },
+        "v4": {
+            "number": "",
+            "x_position": 0,
+            "y_position": 0,
+            "dist": 0
+        },
+        "player_start": {
+            "x_position": 176,
+            "y_position": -1488
+        }
+    },
+    "level_27": {
+        "v1": {
+            "number": "165",
+            "x_position": 384,
+            "y_position": -1512,
+            "dist": 64.4980619863884
+        },
+        "v2": {
+            "number": "166",
+            "x_position": 448,
+            "y_position": -1512,
+            "dist": 64.4980619863884
+        },
+        "v3": {
+            "number": "410",
+            "x_position": 384,
+            "y_position": -1696,
+            "dist": 131.93938001976514
+        },
+        "v4": {
+            "number": "167",
+            "x_position": 512,
+            "y_position": -1600,
+            "dist": 101.19288512538814
+        },
+        "player_start": {
+            "x_position": 416,
+            "y_position": -1568
+        }
+    }
+}
