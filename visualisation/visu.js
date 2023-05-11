@@ -1,5 +1,6 @@
 const div = document.getElementById('level');
 const select = document.getElementById('level_select');
+const d_sectors = document.getElementById('d_sectors');
 const order = document.getElementById('order');
 const v_points = document.getElementById('vert_points');
 const front = document.getElementById('front');
@@ -7,6 +8,7 @@ const back = document.getElementById('back');
 const line_dir = document.getElementById('line_dir');
 
 select.addEventListener('change', changed);
+d_sectors.addEventListener('change', changed);
 order.addEventListener('change', changed);
 v_points.addEventListener('change', changed);
 front.addEventListener('change', changed);
@@ -49,7 +51,7 @@ const linedefs = level.append('g').attr('id', 'linedefs');
 const things = level.append('g').attr('id', 'things');
 const vertices = level.append('g').attr('id', 'vertices');
 
-function draw(order, v_points, front, back, line_dir) {
+function draw(d_sectors, order, v_points, front, back, line_dir) {
   d3.csv('../CSV_data/vertexes_data.csv').then((vertex_data) => {
     d3.csv('../CSV_data/linedefs_data.csv').then((linedefs_data) => {
       d3.csv('../CSV_data/sidedefs_data.csv').then((sidedefs_data) => {
@@ -173,7 +175,8 @@ function draw(order, v_points, front, back, line_dir) {
               filtered_sectors,
               filtered_vertex,
               lineGenerator,
-              order
+              order,
+              d_sectors,
             );
 
             draw_linedefs(filtered_linedefs, front, back, line_dir);
@@ -189,9 +192,12 @@ function draw_sectors(
   filtered_sectors,
   filtered_vertex,
   lineGenerator,
-  order
+  order,
+  d_sectors,
 ) {
-  // TODO: get polygons
+  sectors.selectAll('.sec').remove();
+  if (d_sectors) {
+    // TODO: get polygons
   const lines = filtered_linedefs.map((row, i) => {
     const sector_r = Number(row.right_sidedef);
     const sector_l = Number(row.left_sidedef);
@@ -208,24 +214,11 @@ function draw_sectors(
   });
 
   const polygons = get_polygons(lines);
-  console.log(polygons);
 
   polygons.forEach((poly, p) => {
     if (poly.length > 0) {
       const vertex_chain = [];
       const sec = filtered_linedefs.filter((line) => {
-        // if (
-        //   (line.vertex_1 == '360' &&
-        //     line.vertex_2 == '361' &&
-        //     line.right_sidedef == '20' &&
-        //     line.left_sidedef == '36') ||
-        //   (line.vertex_1 == '230' &&
-        //     line.vertex_2 == '229' &&
-        //     line.right_sidedef == '29' &&
-        //     line.left_sidedef == '30')
-        // ) {
-        //   // sec = line.s[1];
-        // }
         if (line.vertex_1 == poly[0] && line.vertex_2 == poly[1]) return line;
       })[0].right_sidedef;
       const h = Number(filtered_sectors[Number(sec)].floor_height);
@@ -260,7 +253,6 @@ function draw_sectors(
       ))
   );
 
-  sectors.selectAll('.sec').remove();
   sectors
     .selectAll('.sec')
     .data(polygons)
@@ -271,6 +263,7 @@ function draw_sectors(
     .attr('fill', (d) => `hsl(${d[d.length - 2]}, 80%, 50%)`)
     .attr('stroke-width', '2px')
     .attr('d', (d) => d[d.length - 1]);
+  } 
 }
 
 function draw_vertices(filtered_vertex, v_points) {
@@ -350,7 +343,7 @@ function draw_linedefs(filtered_linedefs, front, back, line_dir) {
       .enter()
       .append('text')
       .attr('dx', 3)
-      .attr('dy', -3)
+      .attr('dy', 7)
       .attr('class', 'right_sectors_numbers')
       .append('textPath')
       .attr('xlink:href', (_, i) => `#line_${i}`)
@@ -369,7 +362,7 @@ function draw_linedefs(filtered_linedefs, front, back, line_dir) {
       .enter()
       .append('text')
       .attr('dx', 3)
-      .attr('dy', 6)
+      .attr('dy', -3)
       .attr('class', 'left_sectors_numbers')
       .append('textPath')
       .attr('xlink:href', (_, i) => `#line_${i}`)
@@ -399,6 +392,7 @@ function draw_start(player) {
 }
 
 draw(
+  d_sectors.checked,
   order.checked,
   v_points.checked,
   front.checked,
@@ -408,6 +402,7 @@ draw(
 
 function changed(event) {
   draw(
+    d_sectors.checked,
     order.checked,
     v_points.checked,
     front.checked,
