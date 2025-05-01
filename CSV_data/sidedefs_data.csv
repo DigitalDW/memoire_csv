@@ -2731,7 +2731,7 @@ level_id,episode,mission,x_offset,y_offset,upper_texture,lower_texture,middle_te
 20,3,2,0,0,-,-,FIREWALL,22
 20,3,2,0,0,-,-,ashwall,20
 20,3,2,0,0,-,-,FIREWALL,22
-20,3,2,0,0,-,-,FIREWALL,21
+20,3,2,0,0,-,-,FIREWALL,22
 20,3,2,0,0,-,-,FIREWALL,22
 20,3,2,0,0,-,-,FIREWALL,22
 20,3,2,0,0,-,ROCKRED3,-,20
