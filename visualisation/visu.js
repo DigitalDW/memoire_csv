@@ -470,7 +470,7 @@ function get_polygons(lines, sectors, vertices, lineGenerator) {
       } else {
         // S'il n'y en a pas, on ferme le polygone en cours, calcul le paramètre "d" de <path>, et reset la liste de sommets
         // Ce cas se présente généralement quand un polygone contient un autre (trou) ou quand il a une forme complexe (E1M1 secteur 28)
-        verticesInOrder.push(last.v.filter((vertex) => vertex != last_v)[0]);
+        // verticesInOrder.push(last.v.filter((vertex) => vertex != last_v)[0]);
         verticesInOrder.forEach(
           (vertex, i) =>
             (verticesInOrder[i] = [
