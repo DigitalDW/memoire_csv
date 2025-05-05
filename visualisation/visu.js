@@ -111,7 +111,7 @@ function draw(d_sectors, order, v_points, front, back, line_dir) {
             let min = 10;
             let max = 1500;
             let desired_range_x = [min, max];
-            let desired_range_y = [max * ratio_x_y, min];
+            let desired_range_y = [min, max * ratio_x_y];
 
             /* ###############
             COORDINATE SCALING
@@ -222,33 +222,7 @@ function draw_sectors(
 
     polygons.forEach((polygon, idx) => {
       polygon["h"] = Number(filtered_sectors[polygon.sector].floor_height);
-      //console.log(filtered_linedefs.filter((line, i) => line.vertex_1 == polygon));
     });
-
-    // polygons.forEach((poly, p) => {
-    //   if (poly.length > 0) {
-    //     const vertex_chain = [];
-    //     const sec = filtered_linedefs.filter((line) => {
-    //       if (line.vertex_1 == poly[0] && line.vertex_2 == poly[1]) return line;
-    //     })[0].right_sidedef;
-    //     const h = Number(filtered_sectors[Number(sec)].floor_height);
-    //     poly.forEach((ver, i) => {
-    //       const found_vertex = filtered_vertex[Number(ver)];
-    //       vertex_chain[i] = [found_vertex.x_position, found_vertex.y_position];
-    //     });
-    //     const path = lineGenerator(vertex_chain);
-    //     polygons[p].push(h);
-    //     polygons[p].push(path);
-    //   }
-    // });
-
-    // polygons.sort(
-    //   (poly_1, poly_2) => poly_1[poly_1.length - 2] - poly_2[poly_2.length - 2]
-    // );
-
-    // if (order) {
-    //   polygons.reverse();
-    // }
 
     const heights = polygons.map((poly) => poly.h);
     const h_range = [Math.max(...heights), Math.min(...heights)];
@@ -446,6 +420,9 @@ function get_polygons(lines, sectors, vertices, lineGenerator) {
 
     // Sommet en cours de traitement
     let last_v;
+
+    // Trouver les polgones dans ce secteur
+    const polygonsInSector = [];
     while (linesInSector.length > 0) {
       // La liste qui contient le sommet en cours de traitement
       const last = linesInSector.splice(marker, 1)[0];
@@ -470,7 +447,6 @@ function get_polygons(lines, sectors, vertices, lineGenerator) {
       } else {
         // S'il n'y en a pas, on ferme le polygone en cours, calcul le paramètre "d" de <path>, et reset la liste de sommets
         // Ce cas se présente généralement quand un polygone contient un autre (trou) ou quand il a une forme complexe (E1M1 secteur 28)
-        // verticesInOrder.push(last.v.filter((vertex) => vertex != last_v)[0]);
         verticesInOrder.forEach(
           (vertex, i) =>
             (verticesInOrder[i] = [
@@ -478,11 +454,29 @@ function get_polygons(lines, sectors, vertices, lineGenerator) {
               vertices[vertex].y_position,
             ])
         );
-        path += lineGenerator(verticesInOrder);
+
+        // Placer le(s) polygone(s) trouvé(s) dans la liste polygonsInSector
+        polygonsInSector.push(Array.from(verticesInOrder));
         verticesInOrder.splice(0, verticesInOrder.length);
         marker = 0; // Recommencer un polygone selon la liste
       }
     }
+    // Si la liste contient plusieurs polgones, on part du principe que qu'il s'agit d'un polygone avec des trous
+    // Ce procédé ne change rien au rendu d'un secteur composé de plusieurs polygones séparés
+    if (polygonsInSector.length > 1) {
+      // Dès lors, on détermine quel est le plus grand polygone (contenant)
+      const largest = findLargestPolygon(polygonsInSector);
+      // Pour chaque polygone...
+      polygonsInSector.forEach((polygon, i) => {
+        if (i === largest) return;
+        // ... on regarde s'il est dessiné dans le même sens que le contenant ...
+        if (isClockwise(polygon) == isClockwise(polygonsInSector[largest]))
+          // ... si c'est le cas, on l'inverse, car les trous n'apparaissent comme tel que s'ils sont dessinés dans le sens inverse du contenant
+          polygonsInSector[i] = polygon.reverse();
+      });
+    }
+    console.log(sector, polygonsInSector);
+    polygonsInSector.forEach((poly) => (path += lineGenerator(poly)));
     // Ajouter le polygone
     polygons.push({
       path: path,
@@ -491,4 +485,40 @@ function get_polygons(lines, sectors, vertices, lineGenerator) {
     });
   }
   return polygons;
+}
+
+function isClockwise(polygon) {
+  let sum = 0;
+  for (let i = 0; i < polygon.length - 1; i++) {
+    const [x1, y1] = polygon[i];
+    const [x2, y2] = polygon[i + 1];
+    sum += (x2 - x1) * (y2 + y1);
+  }
+  return sum < 0; // true = sens horaire, false = anti-horaire
+}
+
+function polygonArea(polygon) {
+  let area = 0;
+  const n = polygon.length;
+  for (let i = 0; i < n - 1; i++) {
+    const [x1, y1] = polygon[i];
+    const [x2, y2] = polygon[i + 1];
+    area += x1 * y2 - x2 * y1;
+  }
+  return Math.abs(area / 2);
+}
+
+function findLargestPolygon(polygons) {
+  let maxArea = -Infinity;
+  let largestIndex = -1;
+
+  polygons.forEach((poly, i) => {
+    const area = polygonArea(poly);
+    if (area > maxArea) {
+      maxArea = area;
+      largestIndex = i;
+    }
+  });
+
+  return largestIndex; // index du plus grand
 }
