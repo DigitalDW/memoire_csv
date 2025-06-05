@@ -1,7 +1,6 @@
 const div = document.getElementById("level");
 const select = document.getElementById("level_select");
 const d_sectors = document.getElementById("d_sectors");
-const order = document.getElementById("order");
 const v_points = document.getElementById("vert_points");
 const front = document.getElementById("front");
 const back = document.getElementById("back");
@@ -9,7 +8,6 @@ const line_dir = document.getElementById("line_dir");
 
 select.addEventListener("change", changed);
 d_sectors.addEventListener("change", changed);
-order.addEventListener("change", changed);
 v_points.addEventListener("change", changed);
 front.addEventListener("change", changed);
 back.addEventListener("change", changed);
@@ -51,7 +49,7 @@ const linedefs = level.append("g").attr("id", "linedefs");
 const things = level.append("g").attr("id", "things");
 const vertices = level.append("g").attr("id", "vertices");
 
-function draw(d_sectors, order, v_points, front, back, line_dir) {
+function draw(d_sectors, v_points, front, back, line_dir) {
   d3.csv("../CSV_data/vertexes_data.csv").then((vertex_data) => {
     d3.csv("../CSV_data/linedefs_data.csv").then((linedefs_data) => {
       d3.csv("../CSV_data/sidedefs_data.csv").then((sidedefs_data) => {
@@ -175,7 +173,6 @@ function draw(d_sectors, order, v_points, front, back, line_dir) {
               filtered_sectors,
               filtered_vertex,
               lineGenerator,
-              order,
               d_sectors
             );
 
@@ -192,7 +189,6 @@ function draw_sectors(
   filtered_sectors,
   filtered_vertex,
   lineGenerator,
-  order,
   d_sectors
 ) {
   sectors.selectAll(".sec").remove();
@@ -375,7 +371,6 @@ function draw_start(player) {
 
 draw(
   d_sectors.checked,
-  order.checked,
   v_points.checked,
   front.checked,
   back.checked,
@@ -385,7 +380,6 @@ draw(
 function changed(event) {
   draw(
     d_sectors.checked,
-    order.checked,
     v_points.checked,
     front.checked,
     back.checked,
@@ -427,8 +421,6 @@ function get_polygons(lines, sectors, vertices, lineGenerator) {
       // La liste qui contient le sommet en cours de traitement
       const last = linesInSector.splice(marker, 1)[0];
 
-      if (typeof last === "undefined") console.log(marker, linesInSector);
-
       // Remplir la liste de sommets et choisir la valeur du prochain sommet
       if (verticesInOrder.length == 0) {
         verticesInOrder.push(last.v[0], last.v[1]);
@@ -438,14 +430,14 @@ function get_polygons(lines, sectors, vertices, lineGenerator) {
         verticesInOrder.push(last_v);
       }
 
-      // Trouver la prochaine ligne à traiter
+      // Trouver la prochaine ligne à traiter ...
       const match = linesInSector.filter((line) => line.v.includes(last_v));
       const matchIdx = linesInSector.indexOf(match[0]);
       if (matchIdx > -1) {
-        // Tant qu'on trouve une ligne à traiter, mettre à jour le marker
+        // ...Tant qu'on trouve une ligne à traiter, mettre à jour le marker
         marker = matchIdx;
       } else {
-        // S'il n'y en a pas, on ferme le polygone en cours, calcul le paramètre "d" de <path>, et reset la liste de sommets
+        // ...S'il n'y en a pas, on ferme le polygone en cours, calcule le paramètre "d" de <path>, et reset la liste de sommets
         // Ce cas se présente généralement quand un polygone contient un autre (trou) ou quand il a une forme complexe (E1M1 secteur 28)
         verticesInOrder.forEach(
           (vertex, i) =>
